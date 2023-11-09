@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Prime Numbers Finder</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <div class="container">
+    <label for="start">Start:</label>
+    <input type="number" id="start" placeholder="Start">
+
+    <label for="end">End:</label>
+    <input type="number" id="end" placeholder="End">
+
+    <button onclick="findPrimes()">Find Primes</button>
+
+    <div id="result">
+      <h2>Result:</h2>
+      <div id="primes"></div>
+      <button onclick="showDetails()">Details</button>
+    </div>
+  </div>
+
+  <div id="detailsPopup" class="popup">
+    <span class="close" onclick="closeDetails()">×</span>
+    <div id="detailsContent">
+      <div id="timeInfo">
+        <h2>Performance Details:</h2>
+        <p>Time complexity: O(n2), where n is the range.</p>
+        <p>Space complexity: O(n), where n is the number of prime numbers in the range.</p>
+        <p>Metrics about the performance:</p>
+        <ul>
+          <li>2.a) Time taken to run all instances of the function: This depends on the input range. Larger ranges will take more time.</li>
+          <li>2.b) Time taken to determine if a single number is prime or not in front of each number checked: It's constant time, O(n).</li>
+          <li>2.c) Time taken to determine if a number is prime or not in front of each number found prime: Also constant time, O(n).</li>
+          <li>2.d) Average of 2.b and 2.c for the given range: This would be constant time as well.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
